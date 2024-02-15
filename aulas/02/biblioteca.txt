@@ -1,0 +1,11 @@
+Contexto Inicial: Sistema de Gerenciamento Bibliotecário
+
+No âmbito da otimização dos serviços, uma biblioteca busca implementar um Sistema de Gerenciamento Bibliotecário para eficientemente catalogar e administrar suas obras. Cada livro no acervo é identificado por um número ISBN, acompanhado por informações técnicas como título e ano de publicação. Além disso, os livros estão associados a um ou mais autores, considerando a colaboração intelectual.
+
+O funcionário da biblioteca desempenha um papel essencial na documentação e manutenção da integridade do acervo. Ele é responsável por registrar empréstimos, devoluções e outras transações relevantes. Os alunos, por sua vez, participam ativamente dessas transações, envolvendo-se em empréstimos e devoluções.
+
+Os empréstimos são eventos temporários que demandam registros específicos, como data de empréstimo e data prevista de devolução. Essas informações são cruciais para a administração eficaz do acervo bibliotecário.
+
+Compreendendo essa dinâmica operacional, surge a necessidade de representar esses elementos em modelos conceituais, lógicos e físicos. A biblioteca busca mais do que uma simples base de dados; ela almeja uma estrutura que permita uma administração eficiente e uma experiência aprimorada para os usuários.
+
+Esse contexto proporciona aos desenvolvedores a oportunidade de aplicar suas habilidades técnicas na construção de um Sistema de Gerenciamento Bibliotecário, integrando a funcionalidade necessária para unir o mundo dos livros à eficiência da tecnologia.

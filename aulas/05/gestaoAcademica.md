@@ -34,10 +34,23 @@ Agora, com base nessas entidades e relacionamentos, desenvolva um modelo conceit
 A transição do modelo conceitual para o modelo lógico envolve a representação mais específica das entidades, atributos, relacionamentos e chaves no contexto de um Sistema de Gestão Acadêmica.
 
 Tabelas:
-(listar)
+Aluno:
+    - Matricula (Pk), Nome
+Curso:
+   - ID (PK), Nome
+Diciplina:
+   - ID (PK), Nome
+Professor:
+   - ID (PK), Nome
+Matricula:
+   - Aluno_ID(FK), Curso_ID (FK)
+cursos_Diciplina:
+   - Curso_ID (FK), Diciplina_ID(FK)
+Professor_Disciplina:
+    - Professore_ID (FK), Disciplina_ID(FK)
 
 Chaves Primárias e Estrangeiras:
-(listar)
+- Relacinado nas tabelas!
 
 Agora, com base nessas entidades e relacionamentos, desenvolva um modelo lógico no DrawIO representando visualmente a estrutura completas e as interações entre esses elementos, com seus campos chave refletindo essas interações e seus atributos definidos.
 

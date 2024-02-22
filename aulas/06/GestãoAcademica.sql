@@ -23,4 +23,4 @@ CREATE TABLE Disciplina_Curso (
     PRIMARY KEY(Disciplina_ID, Curso_ID),
     FOREIGN KEY (Disciplina_ID) REFERENCES Disciplina(Id),
     FOREIGN KEY (Curso_ID) REFERENCES Curso(Id)
-);
+)

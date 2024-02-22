@@ -1,0 +1,3 @@
+Cada célula da tabela deve conter um único valor.
+
+Cada linha da tabela deve representar um registro

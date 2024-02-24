@@ -59,3 +59,31 @@ INSERT INTO professor_disciplina (Professor_ID, Disciplina_ID) VALUES
     
 select * from professor_disciplina;
 
+-- DLL Update
+UPDATE professor
+SET especializacao = 'Inteligencia Artificial'
+WHERE ID = 5;
+
+SELECT * FROM disciplina;
+
+UPDATE disciplina
+	SET horas = 40
+	WHERE Horas > 40;
+
+UPDATE disciplina
+	SET Nome = 'Fisica', Horas = 40
+    WHERE ID = 1;
+
+UPDATE disciplina
+	SET horas = 40
+	WHERE horas > 40;
+    
+-- DLL DELETE
+
+DELETE FROM displina WHERE Id = 3;
+	
+
+
+
+
+

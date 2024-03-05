@@ -61,7 +61,7 @@ LEFT JOIN ALUNO ON Aluno_ID = ALUNO.Matricula;
 -------------------------------
 -- Contar quantos alunos se matricularam em cada curso
 -------------------------------
-SELECT Aluno.nome as Nome, Curso.Nome as Curso, COUNT(*) AS Total
+SELECT Curso.Nome as Curso, COUNT(*) AS Total_DeAlunos
 FROM MATRICULA
 JOIN CURSO ON Curso_ID = Curso.Id
 JOIN ALUNO ON Aluno_ID = ALUNO.Matricula

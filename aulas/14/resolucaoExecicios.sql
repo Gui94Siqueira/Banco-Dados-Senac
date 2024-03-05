@@ -65,4 +65,4 @@ SELECT Curso.Nome as Curso, COUNT(*) AS Total_DeAlunos
 FROM MATRICULA
 JOIN CURSO ON Curso_ID = Curso.Id
 JOIN ALUNO ON Aluno_ID = ALUNO.Matricula
-GROUP BY Matricula;
+GROUP BY Id;

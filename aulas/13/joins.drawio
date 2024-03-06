@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2024-03-02T00:18:45.427Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="S73qqfPni4rtapiv9l3U" version="23.1.8" type="device">
+  <diagram name="Página-1" id="0AZLx7lfqz-vYnRKq3Ob">
+    <mxGraphModel dx="637" dy="350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-1" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-2" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="220" y="40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-3" value="&lt;h1&gt;LEFT E RIGHT&lt;/h1&gt;&lt;p&gt;Ao selecionar uma tabela para uma relação inicial (SELECT * FROM TABELA), entenda essa como a tabela da esquerda (left).&lt;br&gt;A tabela a ser associada (JOIN TABELA), será a da direita (right)&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="30" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-4" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-5" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="190" y="200" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-6" value="&lt;font style=&quot;font-size: 8px; background-color: rgb(0, 255, 0);&quot;&gt;INNER&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="245" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-7" value="&lt;h1&gt;INNER JOIN&lt;/h1&gt;&lt;p&gt;A cláusula INNER JOIN compara cada linha da tabela A com as linhas da tabela B para encontrar todos os pares de linhas que satisfazem a condição de junção.&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-9" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-10" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="190" y="360" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-11" value="&lt;span style=&quot;font-size: 8px; background-color: rgb(0, 255, 0);&quot;&gt;LEFT&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="405" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-12" value="&lt;h1&gt;LEFT JOIN&lt;/h1&gt;&lt;p&gt;Retorna todos os registros da tabela esquerda e os registros correspondentes da tabela direita.&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-13" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;opacity=50;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="100" y="670" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-14" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;opacity=50;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="190" y="670" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-15" value="&lt;span style=&quot;font-size: 8px; background-color: rgb(0, 255, 0);&quot;&gt;FULL&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="715" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-16" value="&lt;h1&gt;FULL JOIN&lt;/h1&gt;&lt;p&gt;Retorna todos os registros quando houver uma correspondência na tabela esquerda ou direita.&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="670" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-17" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="100" y="510" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-18" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;opacity=50;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="190" y="510" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-19" value="&lt;span style=&quot;font-size: 8px; background-color: rgb(0, 255, 0);&quot;&gt;RIGHT&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="555" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w_QTJEAvzbbhJ3lSh7R2-20" value="&lt;h1&gt;RIGHT JOIN&lt;/h1&gt;&lt;p&gt;Retorna todos os registros da tabela direita e os registros correspondentes da tabela esquerda.&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="510" width="190" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

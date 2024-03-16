@@ -190,55 +190,110 @@ SELECT produto.Nome, categoria.Nome
 FROM produto
 INNER JOIN categoria ON produto.categoriaID = categoria.Id;
 -- 2. Selecione o nome do cliente e o nome do produto que ele comprou:
-SELECT *
+INSERT INTO ItemPedido (PedidoID, ProdutoID, Quantidade, UsuarioAtualizacao)
+VALUES 
+    (3, 2, 1, 1);
+
+SELECT GROUP_CONCAT(Cliente.Nome) AS Nome_Cliente, group_concat(Produto.Nome) AS Produto_Nome
 FROM pedido
-INNER JOIN produto on produto.ID = ProdutoID
-RIGHT JOIN itempedido ON produto.Id = itempedido.produtoID;
+LEFT JOIN cliente on ClienteId = cliente.Id
+INNER JOIN itempedido ON itempedido.pedidoID = pedido.Id
+RIGHT JOIN produto ON itempedido.ProdutoID = Produto.Id
+GROUP BY itempedido.Id;
 
-
-
-select * from pedido;
 -- 3. Selecione todos os produtos, mesmo aqueles que não têm uma categoria associada:
+INSERT INTO Produto (Nome, Descricao, Preco, UsuarioAtualizacao)
+VALUES 
+    ('Computador', 'Computador desktop para uso pessoal e profissional', 3500.00, 1);
 
+SELECT Produto.Nome AS Produto, categoria.Nome AS Categoria
+FROM PRODUTO
+LEFT JOIN categoria ON produto.categoriaID = categoria.Id;
 
 -- 4. Selecione todos os clientes, mesmo aqueles que não fizeram nenhum pedido:
-
+SELECT cliente.Nome,pedido.*
+FROM cliente
+LEFT JOIN pedido ON ClienteID = cliente.Id;
 
 -- 5. Selecione todas as categorias, mesmo aquelas que não têm produtos associados:
-
+SELECT Produto.Nome as Produtos, categoria.Nome AS Categoria
+FROM PRODUTO
+RIGHT JOIN categoria ON produto.categoriaID = categoria.Id;
 
 -- 6. Selecione todos os produtos, mesmo aqueles que não foram pedidos:
+INSERT INTO ItemPedido (PedidoID, Quantidade, UsuarioAtualizacao)
+VALUES 
+    (4, 1, 1);
 
-
+SELECT produto.nome, itempedido.*
+FROM itempedido
+LEFT JOIN produto ON itempedido.ProdutoID = produto.Id;
 
 ############### DQL com joins e demais filtros
 -- 1. Selecione o nome da categoria e o número de produtos nessa categoria, apenas para categorias com mais de 5 produtos:
-
+SELECT categoria.Nome, COUNT(PRODUTO.Id) AS produto_categoria
+FROM produto
+LEFT JOIN categoria ON produto.CategoriaID = categoria.Id
+GROUP BY categoria.Nome
+HAVING COUNT(produto.Id) > 5;
 
 -- 2. Selecione o nome do cliente e o total de pedidos feitos por cada cliente:
-
+select cliente.Nome AS CLiente_Nome, count(pedido.ID) AS Total_pedido_Cliente
+from pedido
+LEFT JOIN cliente ON pedido.ClienteID = cliente.ID
+GROUP BY cliente.Id;
 
 -- 3. Selecione o nome do produto, o nome da categoria e a quantidade total de vendas para cada produto:
-
+select produto.Nome AS Produto, categoria.Nome AS Categoria, itempedido.Quantidade as quantidate_total_vendida
+FROM itempedido
+LEFT JOIN PRODUTO ON Itempedido.ProdutoID = produto.Id
+RIGHT JOIN CATEGORIA ON produto.CategoriaID = categoria.Id;
 
 -- 4. Selecione o nome da categoria, o número total de produtos nessa categoria e o número de pedidos para cada categoria:
-
+select categoria.Nome AS categoria, count(produto.nome) as Qtd_Produtos, itempedido.quantidade
+from itempedido
+left join produto on itempedido.ProdutoID = produto.ID
+right join categoria on produto.categoriaID = categoria.Id
+group by categoria.nome;
 
 -- 5. Selecione o nome do cliente, o número total de pedidos feitos por esse cliente e a média de produtos por pedido, apenas para clientes que tenham feito mais de 3 pedidos:
+select cliente.Nome, count(pedido.clienteID), AVG(itempedido.ProdutoID)
+from itempedido
+left join produto on itempedido.produtoID = produto.Id
+left join pedido on itempedido.PedidoID = pedido.Id
+inner join cliente on pedido.ClienteID = Cliente.Id
+group by pedido.clienteID
+having count(itempedido.quantidade) > 3;
 
+select * from itempedido;
 
 ##### Crie uma View qualquer para qualquer um dos joins desenvolvidos
+CREATE VIEW ViewProdutoItemPedido AS
+SELECT produto.nome, itempedido.*
+FROM itempedido
+LEFT JOIN produto ON itempedido.ProdutoID = produto.Id;
 
+select * from ViewProdutoItemPedido;
 ##### Crie uma transaction que cadastra um cliente e faça uma venda
 -- Início da transação
+START TRANSACTION;
 
 -- Inserir um novo cliente
-
+INSERT INTO cliente (Nome, Email, Telefone, UsuarioAtualizacao, Ativo) VALUES
+	('Jaqueline Salles', 'JaqueSa@mail', '11910022356', '2024-03-16', 1);
+    
+	SET @novoClienteID = last_insert_id();
 
 -- Inserir um novo pedido para o cliente
-
+INSERT INTO Pedido (ClienteID, DataPedido, FormaPagamento, Status, UsuarioAtualizacao)
+VALUES 
+    (@novoClienteID, '2024-03-14 13:00:00', 1, 'Entregue', 1);
+    SET @novoPedidoID = last_insert_id();
 
 -- Inserir itens no pedido
-
+INSERT INTO ItemPedido (PedidoID, ProdutoID, Quantidade, UsuarioAtualizacao)
+VALUES 
+    (@novoPedidoID, 2, 3, 1);
 
 -- Commit da transação (confirmação das alterações)
+COMMIT;
